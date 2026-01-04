@@ -19,13 +19,11 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       <Header />
-
-      {/* Hero Section */}
       <section className="relative overflow-hidden border-b border-border/40">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f12_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f12_1px,transparent_1px)] bg-[size:14px_24px]" />
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
 
-        <div className="container relative py-24 lg:py-32">
+        <div className="container relative py-24 lg:py-32 m-auto">
           <div className="mx-auto max-w-3xl text-center">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-muted px-4 py-1.5 text-sm">
               <Shield className="h-4 w-4 text-primary" />
@@ -55,9 +53,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* Stats Section */}
-      <section className="border-b border-border/40 bg-muted/30">
+      <section className="border-b border-border/40 bg-muted/30 m-auto">
         <div className="container py-12">
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
             <div className="text-center">
@@ -79,9 +75,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* Features Section */}
-      <section id="features" className="container py-24">
+      <section id="features" className="container py-24 m-auto">
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-balance text-3xl font-bold tracking-tight sm:text-4xl">
             Recursos Poderosos de Análise
@@ -165,10 +159,8 @@ export default function HomePage() {
           </Card>
         </div>
       </section>
-
-      {/* How it Works Section */}
       <section id="how-it-works" className="border-y border-border/40 bg-muted/30">
-        <div className="container py-24">
+        <div className="container py-24 m-auto">
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-balance text-3xl font-bold tracking-tight sm:text-4xl">Como Funciona</h2>
             <p className="text-pretty text-lg text-muted-foreground">Processo simples e automatizado em 3 etapas</p>
@@ -212,9 +204,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* Security Section */}
-      <section id="security" className="container py-24">
+      <section id="security" className="container py-24 m-auto">
         <div className="mx-auto max-w-3xl text-center">
           <div className="mb-6 inline-flex items-center justify-center rounded-full bg-primary/10 p-3">
             <Lock className="h-8 w-8 text-primary" />
@@ -260,10 +250,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
       <section className="border-t border-border/40 bg-muted/30">
-        <div className="container py-24">
+        <div className="container py-24 m-auto">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="mb-4 text-balance text-3xl font-bold tracking-tight sm:text-4xl">
               Pronto para proteger seu negócio?
@@ -280,10 +268,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
       <footer className="border-t border-border/40">
-        <div className="container py-8">
+        <div className="container py-8 m-auto">
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
             <div className="flex items-center gap-2">
               <Shield className="h-5 w-5 text-primary" />

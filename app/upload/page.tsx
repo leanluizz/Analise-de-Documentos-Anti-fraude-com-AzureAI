@@ -8,7 +8,7 @@ export default function UploadPage() {
     <div className="min-h-screen">
       <Header />
 
-      <div className="container py-12">
+      <div className="container py-12 m-auto">
         <div className="mb-8">
           <h1 className="mb-2 text-3xl font-bold tracking-tight">Análise de Documentos</h1>
           <p className="text-muted-foreground">Faça upload dos documentos para verificação automática com Azure AI</p>

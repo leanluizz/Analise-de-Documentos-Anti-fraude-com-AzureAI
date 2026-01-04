@@ -11,7 +11,7 @@ export default function DashboardPage() {
     <div className="min-h-screen">
       <Header />
 
-      <div className="container py-8">
+      <div className="container py-8 m-auto">
         <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <h1 className="mb-2 text-3xl font-bold tracking-tight">Dashboard</h1>

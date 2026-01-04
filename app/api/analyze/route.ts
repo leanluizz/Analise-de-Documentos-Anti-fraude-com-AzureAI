@@ -9,8 +9,6 @@ export async function POST(request: Request) {
     if (!file) {
       return NextResponse.json({ error: "Nenhum arquivo enviado" }, { status: 400 })
     }
-
-    // Validar tipo e tamanho do arquivo
     const validTypes = ["image/jpeg", "image/png", "image/jpg", "application/pdf"]
     if (!validTypes.includes(file.type)) {
       return NextResponse.json({ error: "Tipo de arquivo não suportado" }, { status: 400 })
@@ -20,14 +18,8 @@ export async function POST(request: Request) {
     if (file.size > maxSize) {
       return NextResponse.json({ error: "Arquivo muito grande (máx. 10MB)" }, { status: 400 })
     }
-
-    // Analisar documento com Azure AI
     const documentAnalysis = await analyzeDocumentWithAzureAI(file)
-
-    // Calcular score de fraude
     const fraudAnalysis = calculateFraudScore(documentAnalysis)
-
-    // Retornar resultado completo
     return NextResponse.json({
       success: true,
       data: {

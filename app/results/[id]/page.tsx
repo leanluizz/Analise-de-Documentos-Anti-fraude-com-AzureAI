@@ -76,7 +76,7 @@ export default function ResultsPage() {
     <div className="min-h-screen">
       <Header />
 
-      <div className="container py-8">
+      <div className="container py-8 m-auto">
         <div className="mb-6">
           <Button variant="ghost" size="sm" asChild>
             <Link href="/dashboard">

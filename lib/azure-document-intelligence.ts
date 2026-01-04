@@ -28,14 +28,7 @@ interface FraudAnalysisResult {
 }
 
 export async function analyzeDocumentWithAzureAI(file: File): Promise<DocumentAnalysisResult> {
-  // Em produção, você usaria o Azure AI Document Intelligence SDK
-  // const endpoint = process.env.AZURE_DOCUMENT_INTELLIGENCE_ENDPOINT
-  // const apiKey = process.env.AZURE_DOCUMENT_INTELLIGENCE_KEY
-
-  // Simulação de análise do Azure AI
   await new Promise((resolve) => setTimeout(resolve, 2000))
-
-  // Simular resultados baseados no tipo de arquivo
   const fileName = file.name.toLowerCase()
   const fileType = file.type
 
@@ -45,11 +38,9 @@ export async function analyzeDocumentWithAzureAI(file: File): Promise<DocumentAn
   else if (fileName.includes("comprovante")) documentType = "Comprovante"
   else if (fileName.includes("passaporte")) documentType = "Passaporte"
 
-  const confidence = Math.random() * 0.3 + 0.7 // 70-100%
+  const confidence = Math.random() * 0.3 + 0.7 
 
   const fraudIndicators = []
-
-  // Simular detecção de fraudes baseado em padrões aleatórios
   const hasFraudIndicators = Math.random() > 0.7
 
   if (hasFraudIndicators) {
@@ -95,15 +86,11 @@ export async function analyzeDocumentWithAzureAI(file: File): Promise<DocumentAn
 
 export function calculateFraudScore(analysis: DocumentAnalysisResult): FraudAnalysisResult {
   let baseScore = analysis.confidence * 100
-
-  // Deduzir pontos baseado em indicadores de fraude
   for (const indicator of analysis.fraudIndicators) {
     if (indicator.severity === "high") baseScore -= 30
     else if (indicator.severity === "medium") baseScore -= 15
     else baseScore -= 5
   }
-
-  // Garantir que o score está entre 0 e 100
   const overallScore = Math.max(0, Math.min(100, baseScore))
 
   const riskLevel: "low" | "medium" | "high" = overallScore >= 80 ? "low" : overallScore >= 60 ? "medium" : "high"

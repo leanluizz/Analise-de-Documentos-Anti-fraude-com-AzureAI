@@ -88,7 +88,7 @@ export default function HistoryPage() {
     <div className="min-h-screen">
       <Header />
 
-      <div className="container py-8">
+      <div className="container py-8 m-auto">
         <div className="mb-8">
           <h1 className="mb-2 text-3xl font-bold tracking-tight">Histórico de Análises</h1>
           <p className="text-muted-foreground">Visualize e gerencie todas as análises de documentos realizadas</p>
